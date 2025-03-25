@@ -57,6 +57,7 @@ public class Model1 {
 		ChainResponse crde = new ChainResponse("chain response", null, d, e);
 		Succession saf = new Succession("succession", null, a, f);
 		AlternateSuccession asad = new AlternateSuccession("alternate succession", null, a, d);
+		AlternateSuccession ascd = new AlternateSuccession("alternate succession", null, c, d);
 		AlternateResponse arda = new AlternateResponse("alternate response", null, d, a);
 //		AlternateSuccession ascd = new AlternateSuccession("alternate succession", null, c, d);
 		NotSuccession nsad = new NotSuccession("not succession", null, a, d);
@@ -80,8 +81,9 @@ public class Model1 {
 //		constraints.add(in);
 		constraints.add(pab);
 		constraints.add(pbc);
-		constraints.add(nsad);
+//		constraints.add(nsad);
 //		constraints.add(nsab);
+//		constraints.add(ascd);
 		
 //		constraints.add(a1);
 		constraints.add(a2);

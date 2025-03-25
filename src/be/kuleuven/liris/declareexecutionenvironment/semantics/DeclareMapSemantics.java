@@ -193,6 +193,12 @@ public class DeclareMapSemantics {
 		enabledActivities.removeAll(removed_alternates.getFirst());
 		this.current_explanations.addAll(removed_alternates.getSecond());
 		
+		
+		for(Activity a: aMod.getActivities(true)) 
+			this.current_explanations.addAll(a.getExplanationConstraints());
+		
+		
+		
 		//UnaryPropagator.PropagateAllActivities(aMod.getActivities(true));
 		
 		//disablePermanently();		

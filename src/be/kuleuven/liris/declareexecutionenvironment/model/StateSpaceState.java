@@ -80,17 +80,17 @@ public class StateSpaceState {
                  .append("<TD>").append(values.getFirst()).append("</TD>")
                  .append("<TD>").append(ub_string).append("</TD></TR>\n");
         }
-        table.append("<TR><TD><B>Const.</B></TD><TD><B>Acc</B></TD><TD><B>C</B></TD></TR>\n");
-        for(Constraint c: constraint_table.keySet()) {
-            table.append("<TR><TD>").append(c.toString()).append("</TD>")
-            .append("<TD>").append(constraint_table.get(c).getFirst()).append("</TD>")
-            .append("<TD>").append(constraint_table.get(c).getSecond()).append("</TD></TR>\n");
-        }
+//        table.append("<TR><TD><B>Const.</B></TD><TD><B>Acc</B></TD><TD><B>C</B></TD></TR>\n");
+//        for(Constraint c: constraint_table.keySet()) {
+//            table.append("<TR><TD>").append(c.toString()).append("</TD>")
+//            .append("<TD>").append(constraint_table.get(c).getFirst()).append("</TD>")
+//            .append("<TD>").append(constraint_table.get(c).getSecond()).append("</TD></TR>\n");
+//        }
         table.append("</TABLE>>");
 //        table.append(this.enabled_activities);
         if (start) {
         	dot.append("initial [shape=plaintext,label=\"\"];\n");
-        	dot.append("  initial -> " + this.name +  ";\n");
+        	dot.append("  initial -> " + this.name + " [label=\"" + this.explanations.toString() + "\"];\n");
         }
         dot.append(this.name + "    [shape=box,style=rounded,xlabel=state_" + this.no + " ,label=").append(table).append("];\n");
         return dot.toString();

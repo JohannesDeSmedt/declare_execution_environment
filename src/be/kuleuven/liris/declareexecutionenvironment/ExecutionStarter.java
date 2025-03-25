@@ -30,13 +30,13 @@ public class ExecutionStarter {
         convertDotToPng("graphSS.dot", "graphSS.png");
         
 		
-//        writeStringToFile(state_space.toClusteredModelDot(), "model_dot.dot");
-//        convertDotToPng("model_dot.dot", "model_dot.png");
+        writeStringToFile(state_space.toClusteredModelDot(), "model_dot.dot");
+        convertDotToPng("model_dot.dot", "model_dot.png");
         
         File g = new File("graph.dot"); 
         g.delete();
         File gs = new File("graphSS.dot"); 
-        gs.delete();
+//        gs.delete();
         File mm = new File("model_dot.dot"); 
         mm.delete();
 	}
